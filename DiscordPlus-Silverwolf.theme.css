@@ -1,15 +1,17 @@
 /**
  * @name Discord+ Silverwolf
- * @description Tema estilizado baseado na personagem Silverwolf (Honkai: Star Rail)
+ * @author PlusInsta (modificado por ETO111139)
+ * @version 1.0
+ * @description Tema estilizado com base em Silverwolf (Honkai: Star Rail), com cores neon, blur, efeitos visuais e acento cyberpunk.
+ * @updateUrl https://raw.githubusercontent.com/ETO111139/discord-themes-bacon/main/themes/DiscordPlus-Silverwolf.theme.css
  */
-@updateUrl https://raw.githubusercontent.com/ETO111139/discord-themes-bacon/main/themes/DiscordPlus-Silverwolf.theme.css
+
 @import url('https://plusinsta.github.io/discord-plus/src/DiscordPlus-source.theme.css');
 
-/* ════════════ 🎨 Tema Dark Base ════════════ */
 .theme-dark {
-  --dplus-backdrop: url('https://i.imgur.com/3drb9rO.jpeg'); /* Link externo gerado a partir da imagem */
+  --dplus-backdrop: url('https://i.imgur.com/3drb9rO.jpeg');
 
-  --dplus-accent-color-hue: 270; /* Roxo/azul neon */
+  --dplus-accent-color-hue: 270;
   --dplus-accent-color-saturation: 80%;
   --dplus-accent-color-lightness: 55%;
 
@@ -24,7 +26,6 @@
   --dplus-background-color-alpha: 0.8;
 }
 
-/* ════════════ ☀️ Tema Claro ════════════ */
 .theme-light {
   --dplus-backdrop: url('https://i.imgur.com/3drb9rO.jpeg');
 
@@ -43,7 +44,6 @@
   --dplus-background-color-alpha: 0.85;
 }
 
-/* ════════════ 🌐 Fonte e Layout ════════════ */
 :root {
   --dplus-font-ui: 'Orbitron', sans-serif;
   --dplus-font-body: 'Poppins', sans-serif;
@@ -61,7 +61,6 @@
   --dplus-icon-avatar-profile: 80px;
 }
 
-/* 📱 Responsividade */
 @media (max-width: 800px) {
   :root {
     --dplus-icon-avatar-chat: 48px;
@@ -70,7 +69,6 @@
   }
 }
 
-/* 💠 Blur e vidro */
 .backdrop-1wrmKB,
 [class*="background-"],
 [class*="layer-"] {
@@ -82,7 +80,6 @@
   box-shadow: 0 0 12px rgba(80, 0, 120, 0.25);
 }
 
-/* ✨ Status personalizado */
 .status-1ZXjSF[style*="var(--green-360)"]::after {
   content: " 🟢";
 }
@@ -96,7 +93,6 @@
   content: " ⚫️";
 }
 
-/* 🌈 Cores alternadas para servidores */
 [data-list-item-id^="guildsnav"]:nth-child(odd) svg {
   filter: hue-rotate(10deg);
 }
@@ -104,7 +100,6 @@
   filter: hue-rotate(-10deg);
 }
 
-/* 🔊 Canal de voz destacado */
 .containerDefault-YUSmu3[aria-label*="voz"],
 .containerDefault-YUSmu3[aria-label*="Voz"] {
   background-color: rgba(255, 105, 180, 0.08);
@@ -116,7 +111,6 @@
   100% { box-shadow: 0 0 12px deeppink; }
 }
 
-/* 🎮 Animações suaves */
 * {
   transition: background-color 0.2s ease, color 0.2s ease, border-radius 0.3s ease, backdrop-filter 0.3s ease;
 }
