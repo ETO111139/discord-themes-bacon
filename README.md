@@ -9,6 +9,7 @@ Uma coleção de temas personalizados para Discord, baseados no tema [Discord+](
 | Nome                           | Estilo             |
 |--------------------------------|--------------------|
 | DiscordPlus-Silverwolf        | Neon / Cyberpunk   |
+![Preview](themes/silverwolf-preview.png)
 | (outros em breve...)          |                    |
 
 ---
