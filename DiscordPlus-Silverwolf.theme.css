@@ -1,0 +1,122 @@
+/**
+ * @name Discord+ Silverwolf
+ * @description Tema estilizado baseado na personagem Silverwolf (Honkai: Star Rail)
+ */
+@updateUrl https://raw.githubusercontent.com/ETO111139/discord-themes-bacon/main/themes/DiscordPlus-Silverwolf.theme.css
+@import url('https://plusinsta.github.io/discord-plus/src/DiscordPlus-source.theme.css');
+
+/* ════════════ 🎨 Tema Dark Base ════════════ */
+.theme-dark {
+  --dplus-backdrop: url('https://i.imgur.com/3drb9rO.jpeg'); /* Link externo gerado a partir da imagem */
+
+  --dplus-accent-color-hue: 270; /* Roxo/azul neon */
+  --dplus-accent-color-saturation: 80%;
+  --dplus-accent-color-lightness: 55%;
+
+  --dplus-foreground-color-hue-base: 200;
+  --dplus-foreground-color-hue-links: 290;
+  --dplus-foreground-color-saturation-amount: 1.1;
+  --dplus-foreground-color-lightness-amount: 1;
+
+  --dplus-background-color-hue: 280;
+  --dplus-background-color-saturation-amount: 0.9;
+  --dplus-background-color-lightness-amount: 1;
+  --dplus-background-color-alpha: 0.8;
+}
+
+/* ════════════ ☀️ Tema Claro ════════════ */
+.theme-light {
+  --dplus-backdrop: url('https://i.imgur.com/3drb9rO.jpeg');
+
+  --dplus-accent-color-hue: 270;
+  --dplus-accent-color-saturation: 80%;
+  --dplus-accent-color-lightness: 45%;
+
+  --dplus-foreground-color-hue-base: 210;
+  --dplus-foreground-color-hue-links: 280;
+  --dplus-foreground-color-saturation-amount: 1;
+  --dplus-foreground-color-lightness-amount: 1.1;
+
+  --dplus-background-color-hue: 280;
+  --dplus-background-color-saturation-amount: 0.9;
+  --dplus-background-color-lightness-amount: 1;
+  --dplus-background-color-alpha: 0.85;
+}
+
+/* ════════════ 🌐 Fonte e Layout ════════════ */
+:root {
+  --dplus-font-ui: 'Orbitron', sans-serif;
+  --dplus-font-body: 'Poppins', sans-serif;
+  --dplus-font-header: 'Righteous', cursive;
+
+  --dplus-radius-ui: 12px;
+  --dplus-radius-avatar: 25%;
+  --dplus-radius-server: 20%;
+
+  --dplus-spacing-ui: 10px;
+  --dplus-spacing-app: 10px;
+
+  --dplus-icon-avatar-chat: 64px;
+  --dplus-icon-avatar-list: 32px;
+  --dplus-icon-avatar-profile: 80px;
+}
+
+/* 📱 Responsividade */
+@media (max-width: 800px) {
+  :root {
+    --dplus-icon-avatar-chat: 48px;
+    --dplus-spacing-ui: 6px;
+    --dplus-spacing-app: 6px;
+  }
+}
+
+/* 💠 Blur e vidro */
+.backdrop-1wrmKB,
+[class*="background-"],
+[class*="layer-"] {
+  backdrop-filter: blur(25px) brightness(0.9);
+  -webkit-backdrop-filter: blur(25px) brightness(0.9);
+  background-color: rgba(20, 20, 30, 0.45);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 12px rgba(80, 0, 120, 0.25);
+}
+
+/* ✨ Status personalizado */
+.status-1ZXjSF[style*="var(--green-360)"]::after {
+  content: " 🟢";
+}
+.status-1ZXjSF[style*="var(--yellow-300)"]::after {
+  content: " 🟡";
+}
+.status-1ZXjSF[style*="var(--red-400)"]::after {
+  content: " 🔴";
+}
+.status-1ZXjSF[style*="var(--primary-400)"]::after {
+  content: " ⚫️";
+}
+
+/* 🌈 Cores alternadas para servidores */
+[data-list-item-id^="guildsnav"]:nth-child(odd) svg {
+  filter: hue-rotate(10deg);
+}
+[data-list-item-id^="guildsnav"]:nth-child(even) svg {
+  filter: hue-rotate(-10deg);
+}
+
+/* 🔊 Canal de voz destacado */
+.containerDefault-YUSmu3[aria-label*="voz"],
+.containerDefault-YUSmu3[aria-label*="Voz"] {
+  background-color: rgba(255, 105, 180, 0.08);
+  border-left: 3px solid hotpink;
+  animation: glowVoice 1.6s infinite alternate;
+}
+@keyframes glowVoice {
+  0% { box-shadow: 0 0 4px hotpink; }
+  100% { box-shadow: 0 0 12px deeppink; }
+}
+
+/* 🎮 Animações suaves */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-radius 0.3s ease, backdrop-filter 0.3s ease;
+}
